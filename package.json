@@ -1,0 +1,19 @@
+{
+  "name": "ccna-stp-exam-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A CCNA-level STP, Rapid PVST+, and switching protection exam simulator with a 200-question pool.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {}
+}
