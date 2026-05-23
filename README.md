@@ -1,300 +1,206 @@
 <div align="center">
 
-<!-- HEADER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1f6feb&height=220&section=header&text=CCNA%20STP%20Exam%20Simulator&fontSize=46&fontColor=58a6ff&fontAlignY=35&desc=Rapid%20PVST%2B%20%7C%20Root%20Election%20%7C%20Port%20Roles%20%7C%20Cisco%20IOS%20Troubleshooting&descSize=16&descColor=8b949e&descAlignY=55&animation=fadeIn"/>
+# 🧠 CCNA STP Exam Simulator
 
-<!-- TYPING SVG -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=800&height=95&lines=%F0%9F%8C%89+Root+Bridge+Election+Is+Not+Optional;%E2%9A%A1+Rapid+PVST%2B+Roles%2C+States+%26+Convergence;%F0%9F%9B%A1%EF%B8%8F+BPDU+Guard+%7C+Root+Guard+%7C+Loop+Guard;%F0%9F%A7%A0+Built+To+Stress-Test+My+CCNA+Switching+Knowledge" alt="Typing SVG" />
-</a>
+### A focused Spanning Tree Protocol trainer built for real CCNA switching practice.
+
+<img src="./assets/stp-exam-cockpit.gif" alt="STP exam cockpit animation" width="760"/>
 
 <br/>
 
-<!-- BADGES -->
-<img src="https://img.shields.io/badge/CCNA-200--301_In_Progress-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white"/>
-<img src="https://img.shields.io/badge/STP-Rapid_PVST%2B-1f6feb?style=for-the-badge&logo=cisco&logoColor=white"/>
-<img src="https://img.shields.io/badge/Questions-200+-238636?style=for-the-badge&logo=checkmarx&logoColor=white"/>
-<img src="https://img.shields.io/badge/React-Exam_UI-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
-<img src="https://img.shields.io/badge/Vite-Fast_Dev_Server-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
-
-<br/><br/>
-
-> **A browser-based CCNA switching exam simulator focused on STP, PVST+, Rapid PVST+, port roles, root election, guard features, IOS commands, and real troubleshooting logic.**
+![React](https://img.shields.io/badge/React-Exam_UI-61DAFB?style=flat-square&logo=react&logoColor=111111)
+![Vite](https://img.shields.io/badge/Vite-Fast_Local_Run-646CFF?style=flat-square&logo=vite&logoColor=white)
+![CCNA](https://img.shields.io/badge/CCNA-200--301_Preparation-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
+![STP](https://img.shields.io/badge/STP%20%7C%20PVST%2B%20%7C%20RSTP-Deep_Practice-ff4757?style=flat-square)
+![Questions](https://img.shields.io/badge/Question_Pool-200-2ed573?style=flat-square)
 
 </div>
 
 ---
 
-## 🧠 Why I Built This
+## 🎯 Why this exists
 
-I built this project while preparing for the **Cisco CCNA 200-301** because **Spanning Tree Protocol is one of those topics that looks easy until the exam starts asking topology, tie-breaker, and troubleshooting questions at the same time**.
+I built this while preparing for the **Cisco CCNA 200-301** because STP is one of those topics that looks simple until the exam turns it into a topology puzzle.
 
-STP is not just “one port blocks to prevent loops.”
+You can memorize that the lowest bridge ID wins.
 
-To actually be ready, you need to understand:
+That is not enough.
 
-- why a switch becomes the **root bridge**
-- why a specific port becomes the **root port**
-- why another port becomes **designated, alternate, backup, blocking, or forwarding**
-- how **PVST+ / Rapid PVST+** can create different forwarding paths per VLAN
-- how to read `show spanning-tree` output without guessing
-- when to use **PortFast, BPDU Guard, Root Guard, Loop Guard, and BPDU Filter**
-- which IOS command fixes or verifies the exact situation
+The real challenge is answering questions like:
 
-So I wanted a tool that does more than basic flashcards.
+```text
+Which port blocks if the root path cost ties?
+Why is this port alternate and not designated?
+What happens if a PortFast interface receives a BPDU?
+Which command fixes this exact scenario?
+What does this show spanning-tree output actually prove?
+```
 
-This simulator is designed to pressure-test STP knowledge the same way a real CCNA-style question does:  
-**small topology, small detail, one correct decision.**
-
----
-
-## ⚡ Project Preview
-
-<div align="center">
-
-<img width="420" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding animation"/>
-
-<br/>
-
-### *When STP chooses the port you did not expect... check the bridge ID, cost, sender BID, sender port ID, then local port ID.*
-
-</div>
+This simulator is designed to pressure-test STP knowledge the way the exam does: scenarios, outputs, commands, topology decisions, and traps where guessing breaks fast.
 
 ---
 
-## 🎯 What This Simulator Tests
-
-| Area | What You Get Tested On |
-|:---|:---|
-| 🌉 **STP Fundamentals** | loop prevention, BPDUs, bridge ID, root bridge election |
-| 🧮 **Tie-Breakers** | priority, extended system ID, MAC address, root path cost, sender BID, sender port ID, local port ID |
-| 🔀 **Port Roles** | root port, designated port, alternate port, backup port |
-| 🚦 **Port States** | blocking, listening, learning, forwarding, discarding |
-| ⚡ **Rapid PVST+** | RSTP roles/states, edge ports, proposal/agreement, faster convergence |
-| 🧩 **PVST+ Logic** | different STP instances per VLAN, per-VLAN root placement, VLAN-based load sharing |
-| 🛡️ **STP Protection** | PortFast, BPDU Guard, Root Guard, Loop Guard, BPDU Filter |
-| 🖥️ **Cisco IOS Commands** | configuration, verification, troubleshooting, recovery |
-| 🔎 **Output Analysis** | `show spanning-tree`, blocked ports, root ID vs bridge ID, inconsistent states |
-| 🧪 **Scenario Reasoning** | topology exhibits, failure cases, edge-port mistakes, guard feature selection |
-
----
-
-## 🧪 Question Types
-
-This is not a boring MCQ-only quiz.
-
-The pool includes multiple CCNA-style formats:
-
-- ✅ **Best-answer multiple choice**
-- ✅ **Multi-select questions**
-- ✅ **Command-entry questions**
-- ✅ **Topology / exhibit analysis**
-- ✅ **`show spanning-tree` output interpretation**
-- ✅ **Drag-and-drop style matching**
-- ✅ **Scenario-based troubleshooting**
-- ✅ **Guard-feature decision questions**
-- ✅ **Rapid PVST+ convergence logic**
-- ✅ **Root election and port-role calculation**
-
-The goal is simple:
-
-> **If I can survive this simulator, STP questions in CCNA should feel familiar instead of random.**
-
----
-
-## 🧬 How It Works
-
-<div align="center">
+## 🧩 What the simulator does
 
 ```mermaid
 flowchart LR
-    A[Choose question count] --> B[Set exam timer]
-    B --> C[Randomized question draw]
-    C --> D[Answer mixed-format questions]
-    D --> E[Submit exam]
-    E --> F[Review score + explanations]
-    F --> G[Retake shuffled exam]
+    A[200-question STP pool] --> B[Shuffle engine]
+    B --> C[Choose exam length]
+    C --> D[Start timer]
+    D --> E[Answer mixed question types]
+    E --> F[Submit exam]
+    F --> G[Score + explanations]
+    G --> H[Review weak areas]
 ```
 
-</div>
+It is a browser-based quiz app with a randomized exam mode, configurable timer, and detailed review screen after submission.
 
-### Inside the app
+The goal is not to make STP feel easy.
 
-1. Choose how many questions you want from the pool.
-2. Set your timer.
-3. Start the simulated exam.
-4. Answer randomized questions.
-5. Submit when done.
-6. Review every answer with explanations.
-7. Retake with a new shuffle.
+The goal is to expose exactly where your understanding is weak.
 
 ---
 
-## 🧠 Example Question Categories
+## 🧠 Question design
 
-<details>
-<summary><b>🌉 Root Bridge Election</b></summary>
+The pool contains **200 STP-focused questions** built around CCNA-level switching logic.
 
-Questions force you to compare:
+| Question family | What it tests |
+|---|---|
+| 🏆 Root bridge election | Bridge ID, extended system ID, priority, MAC tie-breakers |
+| 🔌 Port role decisions | Root port, designated port, alternate port, backup port |
+| ⚡ Rapid STP / Rapid PVST+ | RSTP states, roles, edge ports, proposal/agreement behavior |
+| 🧱 PVST+ behavior | Per-VLAN STP instances, VLAN-specific root placement, load sharing |
+| 🛡️ STP protection | BPDU Guard, Root Guard, Loop Guard, BPDU Filter, PortFast |
+| 🖥️ IOS commands | Configuration and verification commands |
+| 📟 Output analysis | `show spanning-tree`, blocked ports, root ID vs bridge ID |
+| 🧭 Topology scenarios | Multi-switch path-cost decisions and blocking logic |
+| 🧷 Matching questions | Drag/drop-style concept mapping |
 
-- bridge priority
-- extended system ID
-- VLAN ID
-- MAC address
-- `root primary` / `root secondary`
-- default priority behavior
+---
 
-Example logic:
+## 🕹️ Question types
+
+This is not a basic multiple-choice dump.
+
+The simulator includes several exam-style formats:
 
 ```text
-Lowest bridge ID wins.
-Bridge ID = priority + extended system ID + MAC address.
-If priority ties, lowest MAC wins.
+[1] Best-answer MCQ
+[2] Multi-select MCQ
+[3] IOS command entry
+[4] Topology exhibit analysis
+[5] show spanning-tree output interpretation
+[6] Drag/drop-style matching
+[7] Scenario-based troubleshooting
 ```
 
-</details>
+Some command questions include optional hints, but using a hint applies a small score penalty.
 
-<details>
-<summary><b>🔌 Root Port / Designated Port Selection</b></summary>
+Because in the real exam, the hint is your preparation.
 
-You get topology questions where you must calculate:
+---
 
-- lowest root path cost
-- lowest sender bridge ID
-- lowest sender port ID
-- lowest local port ID
+## 🧪 Example skills you will be forced to prove
+
+### Root election
 
 ```text
-Root port tie-breakers:
-1. Lowest root path cost
-2. Lowest sender bridge ID
-3. Lowest sender port ID
-4. Lowest local port ID
+VLAN 10
+SW1 priority 32768 MAC 0000.1111.1111
+SW2 priority 32768 MAC 0000.2222.2222
+SW3 priority 28672 MAC 0000.3333.3333
+
+Question:
+Which switch becomes the root bridge?
 ```
 
-</details>
-
-<details>
-<summary><b>⚡ Rapid PVST+</b></summary>
-
-Rapid PVST+ questions cover:
-
-- discarding / learning / forwarding
-- root / designated / alternate / backup roles
-- edge ports
-- proposal/agreement
-- compatibility with classic STP
-- faster convergence behavior
-
-</details>
-
-<details>
-<summary><b>🛡️ STP Protection Features</b></summary>
-
-You are tested on when to use:
-
-| Feature | Main Use |
-|:---|:---|
-| **PortFast** | Edge ports connected to end hosts |
-| **BPDU Guard** | Shut an edge port if it receives BPDUs |
-| **Root Guard** | Prevent an unexpected switch from becoming root |
-| **Loop Guard** | Prevent loops when expected BPDUs stop arriving |
-| **BPDU Filter** | Suppress BPDUs, dangerous if misused |
-
-</details>
-
-<details>
-<summary><b>🖥️ IOS Command Practice</b></summary>
-
-Command questions include syntax like:
-
-```bash
-spanning-tree mode rapid-pvst
-spanning-tree vlan 10 root primary
-spanning-tree vlan 20 priority 24576
-spanning-tree portfast
-spanning-tree bpduguard enable
-spanning-tree guard root
-spanning-tree guard loop
-show spanning-tree vlan 10
-show spanning-tree summary
-show spanning-tree blockedports
-```
-
-</details>
+You need to know that STP compares the full bridge ID, not just the switch name, interface speed, or topology position.
 
 ---
 
-## 🚀 Features
-
-<div align="center">
-
-| Feature | Description |
-|:---|:---|
-| 🎲 **Randomized Exams** | Draws a random set of questions from the full pool |
-| ⏱️ **Timer Mode** | Simulates exam pressure |
-| 🧠 **200+ STP Questions** | Focused on CCNA switching depth |
-| 🧩 **Mixed Formats** | MCQ, multi-select, command input, matching, exhibits |
-| 📊 **Score Review** | Shows correct/wrong answers after submission |
-| 💬 **Explanations** | Every question has reasoning, not just an answer |
-| 🎨 **Theme Toggle** | Blue and red modes |
-| ⚡ **Fast Frontend** | Built with React + Vite |
-
-</div>
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"/>
-
-</div>
-
----
-
-## 📂 Project Structure
+### Port role logic
 
 ```text
-ccna-stp-exam-simulator/
-│
-├── src/
-│   ├── App.jsx              # Main simulator UI and exam logic
-│   ├── questionBank.js      # STP / PVST+ / Rapid PVST+ question pool
-│   ├── main.jsx             # React entry point
-│   └── styles.css           # Custom UI styling
-│
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
+SW1 is root.
+SW3 has two paths:
+
+Direct to SW1: FastEthernet cost 19
+Via SW2: Gigabit + Gigabit cost 8
+
+Question:
+Which port becomes SW3's root port?
+```
+
+This is where weak STP understanding usually collapses. The visually direct path is not always the best STP path.
+
+---
+
+### Protection feature judgment
+
+```text
+A PortFast access port receives a BPDU.
+
+Question:
+Which protection feature shuts the interface down?
+```
+
+You need to distinguish:
+
+```text
+BPDU Guard       -> err-disabled
+Root Guard       -> root-inconsistent
+Loop Guard       -> loop-inconsistent
+BPDU Filter      -> dangerous if misused
 ```
 
 ---
 
-## 🧑‍💻 Run Locally
+## 🧭 STP coverage map
 
-> Do not open `index.html` directly. This is a React/Vite app, so it needs the local dev server.
+```text
+STP fundamentals               ████████████████████
+Root bridge election           ████████████████████
+Root/designated/alternate      ████████████████████
+Path-cost tie-breakers         ████████████████████
+Classic STP states             ████████████████░░░░
+Rapid STP states and roles     ████████████████████
+PVST+ and Rapid PVST+          ████████████████████
+PortFast                       ██████████████████░░
+BPDU Guard                     ████████████████████
+Root Guard                     ████████████████████
+Loop Guard                     ████████████████████
+BPDU Filter                    ███████████████░░░░░
+IOS configuration              ████████████████████
+show command analysis          ████████████████████
+```
+
+---
+
+## 🚀 Run locally
+
+You need **Node.js** installed.
+
+Then run:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the URL shown in the terminal, usually:
+Open the local URL shown in the terminal, usually:
 
 ```text
 http://localhost:5173/
 ```
 
+Do not open `index.html` directly.
+
+This is a Vite React app, so it must run through the local development server.
+
 ---
 
-## 🏗️ Build Locally
+## 🏗️ Build locally
 
 ```bash
 npm run build
@@ -303,55 +209,108 @@ npm run preview
 
 ---
 
-## 🧭 What I Learned Building This
+## 🧱 Tech stack
 
-Building the simulator helped reinforce the exact parts of STP that usually cause mistakes:
-
-- STP is deterministic; there is always a reason a port wins or loses.
-- Root bridge election is simple until extended system ID and VLANs enter the picture.
-- PVST+ means the same physical port can behave differently per VLAN.
-- Rapid PVST+ is not just “faster STP”; it changes roles, states, and convergence behavior.
-- Guard features are not interchangeable.
-- `show spanning-tree` output tells the answer if you know where to look.
-
----
-
-## 🚧 Possible Future Improvements
-
-- [ ] Add topic-based practice mode
-- [ ] Add difficulty filters
-- [ ] Add per-topic score breakdown
-- [ ] Add saved progress in local storage
-- [ ] Add more `show spanning-tree` troubleshooting outputs
-- [ ] Add CCNA mixed switching mode: VLANs, trunks, EtherChannel, STP combined
-- [ ] Add a clean demo GIF from the actual app
+| Layer | Tool |
+|---|---|
+| Frontend | React |
+| Build tool | Vite |
+| Styling | Custom CSS |
+| Question engine | JavaScript question bank |
+| Deployment-ready | Static build output |
 
 ---
 
-## 👨‍💻 Author
+## 📁 Project structure
+
+```text
+ccna-stp-exam-simulator/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── questionBank.js
+│   └── styles.css
+├── assets/
+│   └── stp-exam-cockpit.gif
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 🔬 How the scoring works
+
+The simulator tracks:
+
+- total answered questions
+- remaining unanswered questions
+- correct answers
+- wrong answers
+- hint usage
+- final score after hint penalties
+- explanation review after submission
+
+Command questions are normalized, so minor spacing differences do not instantly destroy the answer.
+
+The intent is to test understanding, not punish formatting noise.
+
+---
+
+## 🧠 What I wanted this project to fix
+
+Most CCNA practice apps treat STP like a definition topic.
+
+It is not.
+
+STP is a decision engine.
+
+This simulator trains the decision process:
+
+```text
+1. Identify the root bridge.
+2. Calculate root path cost.
+3. Pick root ports.
+4. Elect designated ports per segment.
+5. Block the losing redundant paths.
+6. Apply Rapid STP behavior.
+7. Recognize protection feature triggers.
+8. Read IOS output without guessing.
+```
+
+If you can consistently explain those steps under timer pressure, STP stops being scary.
+
+---
+
+## 🛣️ Future improvements
+
+- Add screenshot-based topology exhibits
+- Add difficulty filters
+- Add per-topic performance analytics
+- Add saved exam history
+- Add CCNA mixed switching mode: VLANs, trunks, EtherChannel, STP
+- Add Packet Tracer / GNS3 mini-lab companion tasks
+- Add exportable weak-topic report
+
+---
+
+## 👤 Author
+
+Built by **[@sudo017](https://github.com/sudo017)** while preparing for the CCNA and sharpening switching fundamentals through repetition, topology analysis, and failure-case thinking.
+
+---
 
 <div align="center">
 
-Created by **[Sudo017](https://github.com/Sudo017)**  
-Computer Engineering Student · Network Engineering & IT Infrastructure Focus · CCNA 200-301 In Progress
+### ⭐ If this helps you stop guessing STP, star the repo.
 
-<br/>
-
-<a href="https://github.com/Sudo017">
-  <img src="https://img.shields.io/badge/GitHub-Sudo017-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-<a href="https://www.linkedin.com/in/ayoub-hamed1/">
-  <img src="https://img.shields.io/badge/LinkedIn-Ayoub_Hamed-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-
-</div>
-
----
-
-<div align="center">
-
-### ⭐ If this helps you revise STP, give it a star.
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1f6feb&height=120&section=footer"/>
+```text
+Root bridge elected.
+Alternate port blocked.
+Loop avoided.
+Exam mode: ready.
+```
 
 </div>
