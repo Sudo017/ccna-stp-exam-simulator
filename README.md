@@ -1,8 +1,14 @@
 <div align="center">
 
-# 🧠 CCNA STP Exam Simulator
+# 🧠 CCNA STP / Rapid PVST+ Exam Simulator
 
-### A focused Spanning Tree Protocol trainer built for real CCNA switching practice.
+<p align="center">
+  <a href="https://sudo017.github.io/ccna-stp-exam-simulator/">
+    <img src="https://img.shields.io/badge/🚀_Launch_Live_Simulator-0A66FF?style=for-the-badge&logo=githubpages&logoColor=white" alt="Launch Live Simulator"/>
+  </a>
+</p>
+
+### A timed, randomized STP exam cockpit for serious CCNA switching practice.
 
 <img src="./assets/stp-exam-cockpit.gif" alt="STP exam cockpit animation" width="760"/>
 
@@ -65,17 +71,17 @@ The goal is to expose exactly where your understanding is weak.
 
 The pool contains **200 STP-focused questions** built around CCNA-level switching logic.
 
-| Question family | What it tests |
-|---|---|
-| 🏆 Root bridge election | Bridge ID, extended system ID, priority, MAC tie-breakers |
-| 🔌 Port role decisions | Root port, designated port, alternate port, backup port |
-| ⚡ Rapid STP / Rapid PVST+ | RSTP states, roles, edge ports, proposal/agreement behavior |
-| 🧱 PVST+ behavior | Per-VLAN STP instances, VLAN-specific root placement, load sharing |
-| 🛡️ STP protection | BPDU Guard, Root Guard, Loop Guard, BPDU Filter, PortFast |
-| 🖥️ IOS commands | Configuration and verification commands |
-| 📟 Output analysis | `show spanning-tree`, blocked ports, root ID vs bridge ID |
-| 🧭 Topology scenarios | Multi-switch path-cost decisions and blocking logic |
-| 🧷 Matching questions | Drag/drop-style concept mapping |
+| Question family            | What it tests                                                      |
+| -------------------------- | ------------------------------------------------------------------ |
+| 🏆 Root bridge election    | Bridge ID, extended system ID, priority, MAC tie-breakers          |
+| 🔌 Port role decisions     | Root port, designated port, alternate port, backup port            |
+| ⚡ Rapid STP / Rapid PVST+ | RSTP states, roles, edge ports, proposal/agreement behavior        |
+| 🧱 PVST+ behavior          | Per-VLAN STP instances, VLAN-specific root placement, load sharing |
+| 🛡️ STP protection          | BPDU Guard, Root Guard, Loop Guard, BPDU Filter, PortFast          |
+| 🖥️ IOS commands            | Configuration and verification commands                            |
+| 📟 Output analysis         | `show spanning-tree`, blocked ports, root ID vs bridge ID          |
+| 🧭 Topology scenarios      | Multi-switch path-cost decisions and blocking logic                |
+| 🧷 Matching questions      | Drag/drop-style concept mapping                                    |
 
 ---
 
@@ -211,13 +217,13 @@ npm run preview
 
 ## 🧱 Tech stack
 
-| Layer | Tool |
-|---|---|
-| Frontend | React |
-| Build tool | Vite |
-| Styling | Custom CSS |
-| Question engine | JavaScript question bank |
-| Deployment-ready | Static build output |
+| Layer            | Tool                     |
+| ---------------- | ------------------------ |
+| Frontend         | React                    |
+| Build tool       | Vite                     |
+| Styling          | Custom CSS               |
+| Question engine  | JavaScript question bank |
+| Deployment-ready | Static build output      |
 
 ---
 
